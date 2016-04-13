@@ -81,6 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/seekBar_splitNo"
+        android:thumb="@mipmap/tip_thumb"
         android:layout_below="@+id/textView_splitNo" />
 
     <RelativeLayout
