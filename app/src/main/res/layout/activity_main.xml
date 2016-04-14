@@ -26,13 +26,26 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="$"
+        android:editable="false"
+        android:layout_marginRight="-5dp"
+        android:textColor="@color/TextColor2"
+        android:textSize="@dimen/textSize3"
+        android:layout_below="@+id/textView_billAmount"
+        android:layout_toLeftOf="@+id/editTextBillAmount"
+        android:layout_marginTop="4dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/editTextBillAmount"
-        android:text="00000"
+        android:text="100"
+        android:inputType="numberDecimal"
         android:textColor="@color/TextColor2"
         android:textSize="@dimen/textSize3"
         android:layout_below="@+id/textView_billAmount"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="4dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,7 +85,7 @@
         android:text="@string/splitBill"
         android:textColor="@color/TextColor1"
         android:textSize="@dimen/textSize1"
-        android:id="@+id/textView4"
+        android:id="@+id/textViewsplitbill"
         android:layout_below="@+id/seekBar_tip"
         android:layout_marginTop="19dp"/>
 
