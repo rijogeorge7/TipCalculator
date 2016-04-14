@@ -16,7 +16,7 @@ import android.widget.SeekBar;
 import com.logicshades.tipcalculator.R;
 
 /**
- * Created by rijogeorge on 4/13/16.
+ * Created by rijogeorge on 4/13/16 for custom labeled seekbar.
  */
 public class LabeledThumbSeekBar extends SeekBar {
     int viewWidth, barHeight,labelOffset,thumbX;
@@ -32,7 +32,8 @@ public class LabeledThumbSeekBar extends SeekBar {
 
     public LabeledThumbSeekBar(Context context, AttributeSet attrs) {
         super(context, attrs);
-        labelBackground = BitmapFactory.decodeResource(getResources(), R.mipmap.redshape);        barBounds = new Rect();
+        labelBackground = BitmapFactory.decodeResource(getResources(), R.mipmap.yellowshape);
+        barBounds = new Rect();
         labelTextRect = new Rect();
         labelPos = new Point();
         labelTextPaint = new Paint();

@@ -3,5 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="primary_padding">18.74dp</dimen>
-    <dimen name="textSize1">20sp</dimen>
+    <dimen name="textSize1">15sp</dimen>
+    <dimen name="textSize2">22sp</dimen>
+    <dimen name="textSize3">35sp</dimen>
+    <dimen name="viewTopMargin">49dp</dimen>
 </resources>
