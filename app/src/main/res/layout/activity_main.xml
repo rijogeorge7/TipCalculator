@@ -52,11 +52,14 @@
         android:layout_below="@+id/editTextBillAmount"
         android:layout_alignParentRight="true"/>
 
-    <SeekBar
+
+    <com.logicshades.tipcalculator.widget.LabeledThumbSeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:thumb="@mipmap/percentage_thumb"
         android:id="@+id/seekBar_tip"
         android:layout_below="@+id/textViewtipAmount" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,6 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/TextColor2"
+        android:id="@+id/billPrintSection"
         android:layout_below="@+id/seekBar_splitNo">
 
         <TextView
@@ -123,4 +127,5 @@
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
+
 </RelativeLayout>
