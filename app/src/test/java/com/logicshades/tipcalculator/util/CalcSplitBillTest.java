@@ -22,12 +22,12 @@ public class CalcSplitBillTest {
     @Test
     public void testGetSplitAmount() throws Exception {
         double billTotal=100;
-        double tip=15;
+        int tip=15;
         int splitNo=4;
 
         SplitBill bill=calcBillObj.getSplitAmount(billTotal, tip, splitNo);
 
-
+        assertEquals("total bill calculated", 115, bill.getBillWithTip(),0.01);
         assertEquals("bill split calculated", 28.75, bill.getSplitAmount(),0.01);
     }
 

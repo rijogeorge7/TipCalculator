@@ -6,15 +6,41 @@ package com.logicshades.tipcalculator.domain;
 public class SplitBill {
 
     private double billTotal;
-    private double tip;
+    private double billWithTip;
+    private int tip;
     private double splitAmount;
     private int splitNo;
 
-    public SplitBill(double billTotal, double tip, int splitNo,double splitAmount) {
+    public SplitBill(double billTotal, double billWithTip, int tip, double splitAmount, int splitNo) {
         this.billTotal = billTotal;
+        this.billWithTip = billWithTip;
         this.tip = tip;
         this.splitAmount = splitAmount;
         this.splitNo = splitNo;
+    }
+
+    public double getBillTotal() {
+        return billTotal;
+    }
+
+    public void setBillTotal(double billTotal) {
+        this.billTotal = billTotal;
+    }
+
+    public int getTip() {
+        return tip;
+    }
+
+    public void setTip(int tip) {
+        this.tip = tip;
+    }
+
+    public double getBillWithTip() {
+        return billWithTip;
+    }
+
+    public void setBillWithTip(double billWithTip) {
+        this.billWithTip = billWithTip;
     }
 
     public double getSplitAmount() {
@@ -25,22 +51,11 @@ public class SplitBill {
         this.splitAmount = splitAmount;
     }
 
-
-
-
-    public double getBillTotal() {
-        return billTotal;
+    public int getSplitNo() {
+        return splitNo;
     }
 
-    public void setBillTotal(double billTotal) {
-        this.billTotal = billTotal;
-    }
-
-    public double getTip() {
-        return tip;
-    }
-
-    public void setTip(double tip) {
-        this.tip = tip;
+    public void setSplitNo(int splitNo) {
+        this.splitNo = splitNo;
     }
 }

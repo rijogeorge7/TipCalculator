@@ -8,9 +8,10 @@ import com.logicshades.tipcalculator.domain.SplitBill;
 public class CalcSplitBill {
     SplitBill bill;
 
-    public SplitBill getSplitAmount(double billTotal, double tipPercentage, int split) {
-        double splitAmount = (((billTotal * tipPercentage) / 100) + billTotal) / split;
-        bill = new SplitBill(billTotal, tipPercentage, split, splitAmount);
+    public SplitBill getSplitAmount(double billTotal, int tipPercentage, int split) {
+        double billWithTip = ((billTotal * tipPercentage) / 100)+ billTotal;
+        double splitAmount = billWithTip / split;
+        bill = new SplitBill(billTotal, billWithTip, tipPercentage, splitAmount,split );
         return bill;
     }
 }
