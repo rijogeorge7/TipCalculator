@@ -107,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculateSplitBill() {
 
+        if(billAmount_et.getText().toString().equals(""))
+            return;
         double billAmount = Double.parseDouble(billAmount_et.getText().toString());
         int tipPercentage=seekBar_tip.getProgress();
         int splitno=seekBar_splitNo.getProgress();
