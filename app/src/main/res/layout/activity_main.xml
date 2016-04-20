@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextBillAmount"
-        android:hint="100.00"
+        android:hint="00.00"
         android:inputType="numberDecimal"
         android:textColor="@color/TextColor2"
         android:textSize="@dimen/textSize3"
@@ -61,7 +61,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$100"
+        android:text="$0"
         android:id="@+id/textViewtipAmount"
         android:textColor="@color/TextColor2"
         android:textSize="@dimen/textSize1"
@@ -92,7 +92,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2 Nos"
+        android:text="1 people"
         android:id="@+id/textView_splitNo"
         android:textColor="@color/TextColor2"
         android:textSize="@dimen/textSize1"
@@ -128,7 +128,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$1100"
+            android:text="$0"
             android:textSize="@dimen/textSize3"
             android:id="@+id/textView_billTotalAmount"
             android:layout_below="@+id/textView_billTotal"
@@ -146,7 +146,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$550.00/Person"
+            android:text="$0/Person"
             android:textSize="@dimen/textSize2"
             android:id="@+id/textView_splitAmount"
             android:layout_below="@+id/line"

@@ -23,12 +23,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText billAmount_et;
     private SeekBar seekBar_tip,seekBar_splitNo;
     private CalcSplitBill calcSplitBill;
-    private TextView textView_billTotalAmount, textView_splitAmount;
+    private TextView textView_billTotalAmount, textView_splitAmount,textViewtipAmount;
+    private String currency;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        currency="$";
         calcSplitBill=new CalcSplitBill();
         Typeface gothicFont = Typeface.createFromAsset(getAssets(), "Kozuka-Gothic-Pro-M_26793.ttf");
 
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView_tip=(TextView)findViewById(R.id.textView_tip);
         textView_tip.setTypeface(gothicFont);
 
-        TextView textViewtipAmount=(TextView)findViewById(R.id.textViewtipAmount);
+        textViewtipAmount=(TextView)findViewById(R.id.textViewtipAmount);
         textViewtipAmount.setTypeface(gothicFont);
 
         TextView textViewsplitbill=(TextView)findViewById(R.id.textViewsplitbill);
@@ -54,16 +56,30 @@ public class MainActivity extends AppCompatActivity {
         textView_splitAmount.setTypeface(gothicFont);
 
         seekBar_tip=(SeekBar)findViewById(R.id.seekBar_tip);
+        seekBar_tip.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                calculateSplitBill();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
         seekBar_splitNo=(SeekBar)findViewById(R.id.seekBar_splitNo);
         seekBar_splitNo.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if(seekBar_splitNo.getProgress()==0)
-                    textView_splitNo.setText("1 people");
-                else
-                    textView_splitNo.setText(String.valueOf(seekBar_splitNo.getProgress()+1)+" people");
 
+                textView_splitNo.setText(String.valueOf(seekBar_splitNo.getProgress()+1)+" people");
                 calculateSplitBill();
+
             }
 
             @Override
@@ -112,16 +128,19 @@ public class MainActivity extends AppCompatActivity {
         double billAmount = Double.parseDouble(billAmount_et.getText().toString());
         int tipPercentage=seekBar_tip.getProgress();
         int splitno=seekBar_splitNo.getProgress();
-        SplitBill splitBill=calcSplitBill.getSplitAmount(billAmount, tipPercentage, splitno+1);
+        SplitBill splitBill=calcSplitBill.getSplitAmount(billAmount, tipPercentage, splitno + 1);
         setupnewSplitBill(splitBill);
 
     }
 
     private void setupnewSplitBill(SplitBill splitBill) {
-        textView_billTotalAmount.setText(String.valueOf(splitBill.getBillWithTip()));
-        textView_splitAmount.setText(String.valueOf(splitBill.getSplitAmount()));
+        textViewtipAmount.setText(currency+String.valueOf(splitBill.getTip()));
+        textView_billTotalAmount.setText(currency+String.valueOf(splitBill.getBillWithTip()));
+        textView_splitAmount.setText(currency+String.valueOf(splitBill.getSplitAmount())+"/Person");
     }
 
+
+    //for dismissing softkeyboard while taping outside of the edittext
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
 
