@@ -4,4 +4,9 @@
     <string name="tip">Tip</string>
     <string name="splitBill">Split Bill</string>
     <string name="billTotal">Bill Total</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_clear">Clear</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
