@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.logicshades.tipcalculator.R;
 import com.logicshades.tipcalculator.domain.SplitBill;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         currency="$";
+        Toolbar toolbar=(Toolbar)findViewById(R.id.toolBar);
+        setActionBar(toolbar);
         calcSplitBill=new CalcSplitBill();
         Typeface gothicFont = Typeface.createFromAsset(getAssets(), "Kozuka-Gothic-Pro-M_26793.ttf");
 
