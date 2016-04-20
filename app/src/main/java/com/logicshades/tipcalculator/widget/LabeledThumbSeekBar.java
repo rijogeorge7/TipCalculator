@@ -32,7 +32,7 @@ public class LabeledThumbSeekBar extends SeekBar {
 
     public LabeledThumbSeekBar(Context context, AttributeSet attrs) {
         super(context, attrs);
-        labelBackground = BitmapFactory.decodeResource(getResources(), R.mipmap.yellowshape);
+        labelBackground = BitmapFactory.decodeResource(getResources(), R.mipmap.progressshape);
         barBounds = new Rect();
         labelTextRect = new Rect();
         labelPos = new Point();

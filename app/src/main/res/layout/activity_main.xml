@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextBillAmount"
-        android:text="100"
+        android:hint="100.00"
         android:inputType="numberDecimal"
         android:textColor="@color/TextColor2"
         android:textSize="@dimen/textSize3"
