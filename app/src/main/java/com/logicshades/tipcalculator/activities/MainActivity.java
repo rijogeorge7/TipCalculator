@@ -134,9 +134,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupnewSplitBill(SplitBill splitBill) {
-        textViewtipAmount.setText(currency+String.valueOf(splitBill.getTip()));
-        textView_billTotalAmount.setText(currency+String.valueOf(splitBill.getBillWithTip()));
-        textView_splitAmount.setText(currency+String.valueOf(splitBill.getSplitAmount())+"/Person");
+        textViewtipAmount.setText(currency+String.valueOf(CalcSplitBill.round((splitBill.getBillWithTip()-splitBill.getBillTotal()), 2)));
+        textView_billTotalAmount.setText(currency+String.valueOf(CalcSplitBill.round(splitBill.getBillWithTip(), 2)));
+        textView_splitAmount.setText(currency+String.valueOf(CalcSplitBill.round(splitBill.getSplitAmount(),2))+"/Person");
     }
 
 

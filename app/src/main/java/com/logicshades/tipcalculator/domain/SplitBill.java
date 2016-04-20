@@ -58,4 +58,5 @@ public class SplitBill {
     public void setSplitNo(int splitNo) {
         this.splitNo = splitNo;
     }
+
 }

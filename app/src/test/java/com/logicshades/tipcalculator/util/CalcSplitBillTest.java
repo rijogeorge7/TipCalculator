@@ -20,7 +20,7 @@ public class CalcSplitBillTest {
     }
 
     @Test
-    public void testGetSplitAmount() throws Exception {
+    public void GetSplitAmount() throws Exception {
         double billTotal=100;
         int tip=15;
         int splitNo=4;
@@ -29,6 +29,16 @@ public class CalcSplitBillTest {
 
         assertEquals("total bill calculated", 115, bill.getBillWithTip(),0.01);
         assertEquals("bill split calculated", 28.75, bill.getSplitAmount(),0.01);
+    }
+
+    @Test
+    public void round() throws Exception {
+        double value=55.727272, roundValue=55.73;
+        int places=2;
+
+        double answer=CalcSplitBill.round(value, places);
+
+        assertEquals("rounded no", roundValue, answer,0.00);
     }
 
     @After
