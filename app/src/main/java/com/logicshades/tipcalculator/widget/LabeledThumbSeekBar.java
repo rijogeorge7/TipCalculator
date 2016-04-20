@@ -81,6 +81,7 @@ public class LabeledThumbSeekBar extends SeekBar {
 
             progressPosX = barBounds.left + ((float) this.getProgress() / (float) this.getMax()) * barBounds.width();
 
+            labelOffset=(labelBackground.getWidth()/2);
             labelPos.x = (int) progressPosX - labelOffset;
             labelPos.y = getPaddingTop();
 
