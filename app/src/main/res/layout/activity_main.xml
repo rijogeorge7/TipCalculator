@@ -80,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/primary_padding"
         android:thumb="@mipmap/percentage_thumb"
+        android:progress="20"
         android:id="@+id/seekBar_tip"
         android:layout_below="@+id/textViewtipAmount"
         android:layout_marginTop="10dp"/>
