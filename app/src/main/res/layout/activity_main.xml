@@ -27,6 +27,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/editTextCurrency"
         android:text="$"
         android:editable="false"
         android:layout_marginRight="-5dp"

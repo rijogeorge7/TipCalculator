@@ -26,7 +26,7 @@ import com.logicshades.tipcalculator.util.CalcSplitBill;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText billAmount_et;
+    private EditText billAmount_et,editTextCurrency;
     private SeekBar seekBar_tip,seekBar_splitNo;
     private CalcSplitBill calcSplitBill;
     private TextView textView_billTotalAmount, textView_splitAmount,textViewtipAmount;
@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initScreen();
         //currency="$";
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolBar);
         setActionBar(toolbar);
         calcSplitBill=new CalcSplitBill();
+        editTextCurrency=(EditText)findViewById(R.id.editTextCurrency);
         Typeface gothicFont = Typeface.createFromAsset(getAssets(), "Kozuka-Gothic-Pro-M_26793.ttf");
 
         TextView textView_billAmount=(TextView)findViewById(R.id.textView_billAmount);
@@ -122,18 +122,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        initTipCalc();
+    }
 
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        initTipCalc();
     }
 
     private void initScreen() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         currency=sharedPref.getString(SettingsActivity.key_currency,"$");
+        editTextCurrency.setText(currency);
 
     }
 
     private void initTipCalc() {
-        calculateSplitBill();
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        currency=sharedPref.getString(SettingsActivity.key_currency,"$");
+        editTextCurrency.setText(currency);
+        textView_billTotalAmount.setText(currency+"0");
+        textView_splitAmount.setText(currency+"0/Person");
     }
 
     private void calculateSplitBill() {
