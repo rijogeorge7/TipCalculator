@@ -1,6 +1,7 @@
 package com.logicshades.tipcalculator.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -140,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupnewSplitBill(SplitBill splitBill) {
         textViewtipAmount.setText(currency+String.valueOf(CalcSplitBill.round((splitBill.getBillWithTip()-splitBill.getBillTotal()), 2)));
         textView_billTotalAmount.setText(currency+String.valueOf(CalcSplitBill.round(splitBill.getBillWithTip(), 2)));
-        textView_splitAmount.setText(currency+String.valueOf(CalcSplitBill.round(splitBill.getSplitAmount(),2))+"/Person");
+        textView_splitAmount.setText(currency + String.valueOf(CalcSplitBill.round(splitBill.getSplitAmount(), 2)) + "/Person");
     }
 
 
@@ -191,4 +193,21 @@ public class MainActivity extends AppCompatActivity {
         return true;
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent i = new Intent(this, SettingsActivity.class);
+                startActivity(i);
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
+
 }
