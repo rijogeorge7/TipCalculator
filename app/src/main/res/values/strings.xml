@@ -7,4 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_clear">Clear</string>
     <string name="title_SettingsActivity">Settings</string>
+    <string name="currency">currency</string>
+    <string name="selectyourcurrency">select your currency</string>
+    <string name="dollar">$</string>
 </resources>

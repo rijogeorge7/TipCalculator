@@ -7,10 +7,10 @@
         android:defaultValue="true" />
     <ListPreference
         android:dependency="pref_sync"
-        android:key="pref_syncConnectionType"
-        android:title="select currency"
-        android:dialogTitle="select title dialog"
+        android:key="pref_currencyList"
+        android:title="@string/currency"
+        android:dialogTitle="@string/selectyourcurrency"
         android:entries="@array/pref_currency_entries"
         android:entryValues="@array/pref_currency_values"
-        android:defaultValue="$" />
+        android:defaultValue="@string/dollar" />
 </PreferenceScreen>

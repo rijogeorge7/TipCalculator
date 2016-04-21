@@ -11,6 +11,7 @@ import com.logicshades.tipcalculator.fragments.SettingsFragment;
  * Created by rijogeorge on 4/20/16.
  */
 public class SettingsActivity extends Activity {
+    public static String key_currency="pref_currencyList";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,6 @@ public class SettingsActivity extends Activity {
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolBar);
         setActionBar(toolbar);
 
-        // Display the fragment as the main content.
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, new SettingsFragment())
                 .commit();

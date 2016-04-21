@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="pref_currency_entries">
-        <item>dollar 1</item>
-        <item>dollar 2</item>
+        <item>Euro</item>
+        <item>Dollar</item>
+        <item>INR</item>
+        <item>Pound</item>
     </string-array>
     <string-array name="pref_currency_values">
+        <item>€</item>
         <item>$</item>
-        <item>dinr</item>
+        <item>૱</item>
+        <item>£</item>
     </string-array>
 </resources>
