@@ -18,6 +18,7 @@ public class SettingsActivity extends Activity {
         setContentView(R.layout.pref_with_actionbar);
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolBar);
         setActionBar(toolbar);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, new SettingsFragment())
