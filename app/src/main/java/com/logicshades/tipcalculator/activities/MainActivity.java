@@ -130,10 +130,10 @@ public class MainActivity extends AppCompatActivity {
         initTipCalc();
     }
 
-    private void initScreen() {
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        currency=sharedPref.getString(SettingsActivity.key_currency,"$");
-        editTextCurrency.setText(currency);
+    private void clearData() {
+        initTipCalc();
+        billAmount_et.setText("");
+
 
     }
 
@@ -218,6 +218,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_settings:
                 Intent i = new Intent(this, SettingsActivity.class);
                 startActivity(i);
+                return true;
+
+            case R.id.action_clear:
+                clearData();
                 return true;
 
             default:
