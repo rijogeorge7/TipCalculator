@@ -10,4 +10,6 @@
     <string name="currency">currency</string>
     <string name="selectyourcurrency">select your currency</string>
     <string name="dollar">$</string>
+    //for admob
+    <string name="banner_ad_unit_id">ca-app-pub-8365714714436487/7284822652</string>
 </resources>

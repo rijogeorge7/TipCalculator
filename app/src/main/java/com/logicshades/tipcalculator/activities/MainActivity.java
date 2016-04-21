@@ -6,10 +6,12 @@ import android.content.SharedPreferences;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -20,6 +22,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.logicshades.tipcalculator.R;
 import com.logicshades.tipcalculator.domain.SplitBill;
 import com.logicshades.tipcalculator.util.CalcSplitBill;
@@ -121,6 +125,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("190BD804C3B2C39CA5C5202ADC32BAA2")
+                .build();
+
+        mAdView.loadAd(adRequest);
+
+        String id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+        Log.d("deviceid", id);
 
     }
 

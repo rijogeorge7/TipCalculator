@@ -8,7 +8,6 @@
         android:id="@+id/action_clear"
         android:orderInCategory="1"
         android:title="@string/action_clear"
-        android:icon="@mipmap/clearicon"
         android:showAsAction="ifRoom"
         app:showAsAction="ifRoom"/>
 
