@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TipCalculator</string>
+    <string name="app_name">Tip Calculator</string>
     <string name="billAmount">Bill Amount</string>
     <string name="tip">Tip</string>
     <string name="splitBill">Split Bill</string>
@@ -9,6 +9,7 @@
     <string name="title_SettingsActivity">Settings</string>
     <string name="currency">currency</string>
     <string name="selectyourcurrency">select your currency</string>
+    <string name="person">person</string>
     <string name="dollar">$</string>
     //for admob
     <string name="banner_ad_unit_id">ca-app-pub-8365714714436487/7284822652</string>

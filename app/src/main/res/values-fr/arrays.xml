@@ -2,10 +2,10 @@
 <resources>
     <string-array name="pref_currency_entries">
         <item>Euro</item>
-        <item>Dollar</item>
+        <item>Dólar</item>
         <item>INR</item>
         <item>Pound</item>
-        <item>Ruble</item>
+        <item>Rublo</item>
         <item>Yen</item>
         <item>Yuan</item>
     </string-array>

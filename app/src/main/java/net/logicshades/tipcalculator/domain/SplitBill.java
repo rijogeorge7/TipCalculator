@@ -1,4 +1,4 @@
-package com.logicshades.tipcalculator.domain;
+package net.logicshades.tipcalculator.domain;
 
 /**
  * Created by rijogeorge on 4/12/16.

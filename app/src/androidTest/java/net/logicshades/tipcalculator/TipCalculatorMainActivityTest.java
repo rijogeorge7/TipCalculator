@@ -1,10 +1,10 @@
-package com.logicshades.tipcalculator;
+package net.logicshades.tipcalculator;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
 
-import com.logicshades.tipcalculator.activities.MainActivity;
+import net.logicshades.tipcalculator.activities.MainActivity;
 
 import org.junit.Before;
 import org.junit.Rule;

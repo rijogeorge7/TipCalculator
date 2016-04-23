@@ -1,4 +1,4 @@
-package com.logicshades.tipcalculator.activities;
+package net.logicshades.tipcalculator.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,9 +24,10 @@ import android.widget.Toolbar;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.logicshades.tipcalculator.R;
-import com.logicshades.tipcalculator.domain.SplitBill;
-import com.logicshades.tipcalculator.util.CalcSplitBill;
+
+import net.logicshades.tipcalculator.R;
+import net.logicshades.tipcalculator.domain.SplitBill;
+import net.logicshades.tipcalculator.util.CalcSplitBill;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,36 +40,37 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(net.logicshades.tipcalculator.R.layout.activity_main);
         //currency="$";
-        Toolbar toolbar=(Toolbar)findViewById(R.id.toolBar);
+        Toolbar toolbar=(Toolbar)findViewById(net.logicshades.tipcalculator.R.id.toolBar);
         setActionBar(toolbar);
         calcSplitBill=new CalcSplitBill();
-        editTextCurrency=(EditText)findViewById(R.id.editTextCurrency);
+        editTextCurrency=(EditText)findViewById(net.logicshades.tipcalculator.R.id.editTextCurrency);
         Typeface gothicFont = Typeface.createFromAsset(getAssets(), "Kozuka-Gothic-Pro-M_26793.ttf");
 
-        TextView textView_billAmount=(TextView)findViewById(R.id.textView_billAmount);
+        TextView textView_billAmount=(TextView)findViewById(net.logicshades.tipcalculator.R.id.textView_billAmount);
         textView_billAmount.setTypeface(gothicFont);
 
-        TextView textView_tip=(TextView)findViewById(R.id.textView_tip);
+        TextView textView_tip=(TextView)findViewById(net.logicshades.tipcalculator.R.id.textView_tip);
         textView_tip.setTypeface(gothicFont);
 
-        textViewtipAmount=(TextView)findViewById(R.id.textViewtipAmount);
+        textViewtipAmount=(TextView)findViewById(net.logicshades.tipcalculator.R.id.textViewtipAmount);
         textViewtipAmount.setTypeface(gothicFont);
 
-        TextView textViewsplitbill=(TextView)findViewById(R.id.textViewsplitbill);
+        TextView textViewsplitbill=(TextView)findViewById(net.logicshades.tipcalculator.R.id.textViewsplitbill);
         textViewsplitbill.setTypeface(gothicFont);
 
-        final TextView textView_splitNo=(TextView)findViewById(R.id.textView_splitNo);
+        final TextView textView_splitNo=(TextView)findViewById(net.logicshades.tipcalculator.R.id.textView_splitNo);
+        textView_splitNo.setText("1 "+getString(R.string.person));
         textView_splitNo.setTypeface(gothicFont);
 
-        textView_billTotalAmount=(TextView)findViewById(R.id.textView_billTotalAmount);
+        textView_billTotalAmount=(TextView)findViewById(net.logicshades.tipcalculator.R.id.textView_billTotalAmount);
         textView_billTotalAmount.setTypeface(gothicFont);
 
-        textView_splitAmount=(TextView)findViewById(R.id.textView_splitAmount);
+        textView_splitAmount=(TextView)findViewById(net.logicshades.tipcalculator.R.id.textView_splitAmount);
         textView_splitAmount.setTypeface(gothicFont);
 
-        seekBar_tip=(SeekBar)findViewById(R.id.seekBar_tip);
+        seekBar_tip=(SeekBar)findViewById(net.logicshades.tipcalculator.R.id.seekBar_tip);
         seekBar_tip.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -85,12 +87,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        seekBar_splitNo=(SeekBar)findViewById(R.id.seekBar_splitNo);
+        seekBar_splitNo=(SeekBar)findViewById(net.logicshades.tipcalculator.R.id.seekBar_splitNo);
         seekBar_splitNo.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
-                textView_splitNo.setText(String.valueOf(seekBar_splitNo.getProgress()+1)+" people");
+                textView_splitNo.setText(String.valueOf(seekBar_splitNo.getProgress()+1)+" "+getString(R.string.person));
                 calculateSplitBill();
 
             }
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        billAmount_et=(EditText)findViewById(R.id.editTextBillAmount);
+        billAmount_et=(EditText)findViewById(net.logicshades.tipcalculator.R.id.editTextBillAmount);
         billAmount_et.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -125,15 +127,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        //for admob
+        AdView mAdView = (AdView) findViewById(net.logicshades.tipcalculator.R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("190BD804C3B2C39CA5C5202ADC32BAA2")
                 .build();
 
         mAdView.loadAd(adRequest);
-
-        String id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
-        Log.d("deviceid", id);
 
     }
 
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        getMenuInflater().inflate(net.logicshades.tipcalculator.R.menu.menu_main,menu);
         return true;
 
     }
@@ -228,12 +228,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_settings:
+            case net.logicshades.tipcalculator.R.id.action_settings:
                 Intent i = new Intent(this, SettingsActivity.class);
                 startActivity(i);
                 return true;
 
-            case R.id.action_clear:
+            case net.logicshades.tipcalculator.R.id.action_clear:
                 clearData();
                 return true;
 

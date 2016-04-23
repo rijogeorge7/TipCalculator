@@ -1,6 +1,7 @@
 package com.logicshades.tipcalculator.util;
 
-import com.logicshades.tipcalculator.domain.SplitBill;
+import net.logicshades.tipcalculator.domain.SplitBill;
+import net.logicshades.tipcalculator.util.CalcSplitBill;
 
 import org.junit.After;
 import org.junit.Before;

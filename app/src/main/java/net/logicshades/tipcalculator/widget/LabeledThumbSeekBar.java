@@ -1,4 +1,4 @@
-package com.logicshades.tipcalculator.widget;
+package net.logicshades.tipcalculator.widget;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,7 +13,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.SeekBar;
 
-import com.logicshades.tipcalculator.R;
+import net.logicshades.tipcalculator.R;
 
 /**
  * Created by rijogeorge on 4/13/16 for custom labeled seekbar.

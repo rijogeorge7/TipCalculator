@@ -1,9 +1,9 @@
-package com.logicshades.tipcalculator.fragments;
+package net.logicshades.tipcalculator.fragments;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
-import com.logicshades.tipcalculator.R;
+import net.logicshades.tipcalculator.R;
 
 /**
  * Created by rijogeorge on 4/20/16.

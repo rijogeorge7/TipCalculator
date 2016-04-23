@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.logicshades.tipcalculator" >
+    package="net.logicshades.tipcalculator" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".activities.MainActivity" >
+        <activity android:name="net.logicshades.tipcalculator.activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,9 +16,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name="net.logicshades.tipcalculator.activities.SettingsActivity"
             android:label="@string/title_SettingsActivity"
-            android:parentActivityName=".activities.MainActivity">
+            android:parentActivityName="net.logicshades.tipcalculator.activities.MainActivity">
         </activity>
     </application>
 

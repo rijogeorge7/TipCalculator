@@ -1,6 +1,6 @@
-package com.logicshades.tipcalculator.util;
+package net.logicshades.tipcalculator.util;
 
-import com.logicshades.tipcalculator.domain.SplitBill;
+import net.logicshades.tipcalculator.domain.SplitBill;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

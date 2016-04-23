@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pourboire Calculatrice</string>
+    <string name="billAmount">montant de la facture</string>
+    <string name="tip">Pourboire</string>
+    <string name="splitBill">facture divisée</string>
+    <string name="billTotal">La facture totale</string>
+    <string name="action_settings">paramètres</string>
+    <string name="action_clear">Clair</string>
+    <string name="title_SettingsActivity">paramètres</string>
+    <string name="currency">Monnaie</string>
+    <string name="selectyourcurrency">sélectionnez votre monnaie</string>
+    <string name="person">personne</string>
+    <string name="dollar">$</string>
+    //for admob
+    <string name="banner_ad_unit_id">ca-app-pub-8365714714436487/7284822652</string>
+</resources>

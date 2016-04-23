@@ -1,4 +1,4 @@
-package com.logicshades.tipcalculator;
+package net.logicshades.tipcalculator;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

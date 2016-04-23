@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Propina calculadora</string>
+    <string name="billAmount">Importe del billete</string>
+    <string name="tip">Propina</string>
+    <string name="splitBill">Bill dividida</string>
+    <string name="billTotal">La factura total</string>
+    <string name="action_settings">ajustes</string>
+    <string name="action_clear">claro</string>
+    <string name="title_SettingsActivity">ajustes</string>
+    <string name="currency">moneda</string>
+    <string name="selectyourcurrency">seleccionar tu moneda</string>
+    <string name="person">persona</string>
+    <string name="dollar">$</string>
+    //for admob
+    <string name="banner_ad_unit_id">ca-app-pub-8365714714436487/7284822652</string>
+
+</resources>
